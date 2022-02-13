@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图文 on BafeimaoBlog</title>
+    <link>http://bafeimao.github.io/tags/%E5%9B%BE%E6%96%87/</link>
+    <description>Recent content in 图文 on BafeimaoBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 May 2021 11:46:16 +0800</lastBuildDate><atom:link href="http://bafeimao.github.io/tags/%E5%9B%BE%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从零开始搭建GitHub&#43;HuGo&#43;PicGo图床教程</title>
+      <link>http://bafeimao.github.io/posts/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 04 May 2021 11:46:16 +0800</pubDate>
+      
+      <guid>http://bafeimao.github.io/posts/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</guid>
+      <description>[toc]
+安装PicGo 打开网址 向下寻找到稳定版本2.2.2，目前是2.2.2，以后更新自行选择更高稳定版本安装
+下载.exe结尾的文件，这里是PicGo-Setup-2.2.2.exe
+安装后可能会提示更新，但因为是beta版所以我们选择不更新
+下载完成后打开exe文件安装，选择全部用户和单独安装都可以，下一步直到安装结束
+打开PicGo显示如下界面
+创建Github账号 打开网址 教程网址 如图所示操作
+起的名字就是网址地址例如我的是bafeimao则网址地址是bafeimao.github.io以此类推
+创建仓库
+然后在github个人设置页面，创建一个访问令牌
+需要输入密码则输入密码
+只勾选第一个repo拉到最下面
+点击Generate new token按照下图配置创建即可。
+保存生成的密钥
+配置PicGo   第一个是用户名/仓库名
+  第二个是分支名，一般默认设置为main
+  第三个是Token，就是刚刚拿到的密钥
+  后面两个可写可不写，建议存储路径写一个，把图片放到一个地方。
+  点击“确定”，并设置为“默认图床”
+  上传图片查看github仓库是否有记录</description>
+    </item>
+    
+  </channel>
+</rss>

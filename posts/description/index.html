@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>7月6spring</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	==================<br>
+	== <a href="http://bafeimao.github.io">BafeimaoBlog</a> ==<br>
+	==================
+	<div style="float: right;">Welcome!</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>7月6spring</h1>
+			<b><time>06.07.2021 20:54</time></b>
+		       
+		           <a href="/tags/"></a>
+        	       
+		           <a href="/tags/"></a>
+        	       
+
+			<div>
+				<p>记录一次spring运行bug，</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210706205730678.png" alt="image-20210706205730678" />
+</figure>
+
+
+</p>
+<p>找了半天以为是自己代码有问题，到最后jps发现被占用了</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210706205812296.png" alt="image-20210706205812296" />
+</figure>
+
+
+</p>
+<p>解决方式是关闭掉所有运行的java程序命令是</p>
+<pre tabindex="0"><code>taskkill /F /IM java.exe
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210706205912912.png" alt="image-20210706205912912" />
+</figure>
+
+
+</p>
+<p>然后就可以正常使用Idea运行程序了</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/11-16%E9%9A%8F%E7%AC%94/">11 16随笔</a></li>
+				
+				<li><a href="/posts/sqltips/">SQLtips</a></li>
+				
+				<li><a href="/posts/javascript_and_java_cookyourlasagna/">JavaScript_and_Java_Cookyourlasagna</a></li>
+				
+				<li><a href="/posts/javascript_and_java_helloworld/">JavaScript_and_Java_HelloWorld</a></li>
+				
+				<li><a href="/posts/0910%E9%9A%8F%E7%AC%94/">0910随笔</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="http://bafeimao.github.io"><b>BafeimaoBlog</b></a>.
+	<a href="https://github.com/example"><b>Github</b></a>.
+	<a href="https://example.com/@user"><b>Mastodon</b></a>.
+	<a href="/imprint"><b>Imprint</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

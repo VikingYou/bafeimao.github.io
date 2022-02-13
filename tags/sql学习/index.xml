@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL学习 on BafeimaoBlog</title>
+    <link>http://bafeimao.github.io/tags/sql%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in SQL学习 on BafeimaoBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 May 2021 15:04:54 +0800</lastBuildDate><atom:link href="http://bafeimao.github.io/tags/sql%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQLNote</title>
+      <link>http://bafeimao.github.io/posts/sqlnote/</link>
+      <pubDate>Thu, 06 May 2021 15:04:54 +0800</pubDate>
+      
+      <guid>http://bafeimao.github.io/posts/sqlnote/</guid>
+      <description>这个文章是根据极客时间SQL必知必会课程所做的笔记，供自己复习使用，冲冲冲！
+SQL语言按照功能划分成以下的四个部分：
+ DDL，英文叫做 Data Definition Language，也就是数据定义语言，它用来定义我们的数据库对象，包括数据库、数据表和列。通过使用 DDL，我们可以创建，删除和修改数据库和表结构。 DML，英文叫做 Data Manipulation Language，数据操作语言，我们用它操作和数据库相关的记录，比如增加、删除、修改数据表中的记录。 DCL，英文叫做 Data Control Language，数据控制语言，我们用它来定义访问权限和安全级别。 DQL，英文叫做 Data Query Language，数据查询语言，我们用它查询想要的记录，它是 SQL 语言的重中之重。在实际的业务中，我们绝大多数情况下都是在和查询打交道，因此学会编写正确且高效的查询语句，是学习的重点。  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>LinuxAction</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	==================<br>
+	== <a href="http://bafeimao.github.io">BafeimaoBlog</a> ==<br>
+	==================
+	<div style="float: right;">Welcome!</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>LinuxAction</h1>
+			<b><time>11.05.2021 09:58</time></b>
+		       
+		           <a href="/tags/linux">Linux</a>
+        	       
+		           <a href="/tags/learn">Learn</a>
+        	       
+
+			<div>
+				<h2 id="vim正常模式命令">Vim正常模式命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">i	插入
+I	插入（位置在行首）
+a	插入（光标位置的后面）
+A	插入（位置在行摸）
+o	插入（位置在当前行的下一行，类似于回车）
+O	插入（位置在当前行的上一行）
+HJKL	HL向左向右	JK向上向下
+yy	复制一整行 3yy复制当前位置下三行	p粘贴
+y$	复制当前位置到结尾
+dd	剪切一整行 
+d$	剪切当前位置到结尾
+u	撤销操作可以多次撤销
+Ctrl+r	重做（取消撤销）
+x	单个字符删除
+:set nu	显示行数
+:set nonu	取消显示行号
+11G	移动到11行
+g文本第一行	G文本最后一行
+^	行首	$	行末
+</code></pre></div><h2 id="vim的命令模式">Vim的命令模式</h2>
+<pre tabindex="0"><code>:w /root/a.txt	保存到此目录下
+:q!	不保存退出
+:!ifcfg	临时查看ip地址
+/x	查找字符x	n查找下一个	N查找上一个
+:%s/old/new/g	替换	s是针对光标一行，%s是整个文档  /g global全局多次替换（一次替换不用加g，多次替换要加）
+</code></pre><h2 id="vim的可视模式">vim的可视模式</h2>
+<pre tabindex="0"><code>v	字符可视模式
+V	行可视模式
+Ctrl+v	块可视模式
+</code></pre><h2 id="用户管理常用命令">用户管理常用命令</h2>
+<pre tabindex="0"><code>useradd	新建用户
+userdel	删除用户
+passwd	修改用户密码
+usermod	修改用户属性
+chage	修改用户属性
+</code></pre>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/11-16%E9%9A%8F%E7%AC%94/">11 16随笔</a></li>
+				
+				<li><a href="/posts/sqltips/">SQLtips</a></li>
+				
+				<li><a href="/posts/javascript_and_java_cookyourlasagna/">JavaScript_and_Java_Cookyourlasagna</a></li>
+				
+				<li><a href="/posts/javascript_and_java_helloworld/">JavaScript_and_Java_HelloWorld</a></li>
+				
+				<li><a href="/posts/0910%E9%9A%8F%E7%AC%94/">0910随笔</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="http://bafeimao.github.io"><b>BafeimaoBlog</b></a>.
+	<a href="https://github.com/example"><b>Github</b></a>.
+	<a href="https://example.com/@user"><b>Mastodon</b></a>.
+	<a href="/imprint"><b>Imprint</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

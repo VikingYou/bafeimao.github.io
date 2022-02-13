@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>JavaScript_and_Java_Cookyourlasagna</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	==================<br>
+	== <a href="http://bafeimao.github.io">BafeimaoBlog</a> ==<br>
+	==================
+	<div style="float: right;">Welcome!</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>JavaScript_and_Java_Cookyourlasagna</h1>
+			<b><time>12.09.2021 08:19</time></b>
+		       
+		           <a href="/tags/"></a>
+        	       
+		           <a href="/tags/"></a>
+        	       
+
+			<div>
+				<h1 id="java">Java</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Java is a statically-typed language, which means that everything has a type at compile-time. Assigning a value to a name is referred to as defining a variable. A variable is defined by explicitly specifying its type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> explicitVar <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+</code></pre></div><p>Updating a variable&rsquo;s value is done through the <code>=</code> operator. Once defined, a variable&rsquo;s type can never change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> <span style="color:#75715e">// Assign initial value
+</span><span style="color:#75715e"></span>count <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>     <span style="color:#75715e">// Update to new value
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Compiler error when assigning different type
+</span><span style="color:#75715e">// count = false;
+</span></code></pre></div><p>Java is an <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/index.html">object-oriented language</a> and requires all functions to be defined in a <em>class</em>. The <code>class</code> keyword is used to define a class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>A function within a class is referred to as a <em>method</em>. Each method can have zero or more parameters. All parameters must be explicitly typed, there is no type inference for parameters. Similarly, the return type must also be made explicit. Values are returned from functions using the <code>return</code> keyword. To allow a method to be called by other classes, the <code>public</code> access modifier must be added.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Invoking a method is done by specifying its class and method name and passing arguments for each of the method&rsquo;s parameters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+</code></pre></div><p>Scope in Java is defined between the <code>{</code> and <code>}</code> characters.</p>
+<p>Java supports two types of comments. Single line comments are preceded by <code>//</code> and multiline comments are inserted between <code>/*</code> and <code>*/</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lasagna</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// TODO: define the &#39;expectedMinutesInOven()&#39; method
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">expectedMinutesInOven</span><span style="color:#f92672">(){</span>
+            <span style="color:#66d9ef">int</span> x<span style="color:#f92672">=</span>40<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> x<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    
+    <span style="color:#75715e">// TODO: define the &#39;remainingMinutesInOven()&#39; method
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">remainingMinutesInOven</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">){</span>
+            <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> 40<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> y<span style="color:#f92672">-</span>x<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    
+    <span style="color:#75715e">// TODO: define the &#39;preparationTimeInMinutes()&#39; method
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">preparationTimeInMinutes</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> x<span style="color:#f92672">*</span>2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#75715e">// TODO: define the &#39;totalTimeInMinutes()&#39; method
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">totalTimeInMinutes</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">,</span><span style="color:#66d9ef">int</span> y<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">return</span> x<span style="color:#f92672">*</span>2<span style="color:#f92672">+</span>y<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h1 id="javascript">JavaScript</h1>
+<h2 id="introduction-1">Introduction</h2>
+<p>JavaScript is a dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
+<h3 id="re-assignment">(Re-)Assignment</h3>
+<p>There are a few primary ways to assign values to names in JavaScript - using variables or constants. On Exercism, variables are always written in <a href="https://en.wikipedia.org/wiki/Camel_case">camelCase</a>; constants are written in <a href="https://en.wikipedia.org/wiki/Snake_case">SCREAMING_SNAKE_CASE</a>. There is no official guide to follow, and various companies and organizations have various style guides. <em>Feel free to write variables any way you like</em>. The upside from writing them the way the exercises are prepared is that they&rsquo;ll be highlighted differently in the web interface and most IDEs.</p>
+<p>Variables in JavaScript can be defined using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a> keyword.</p>
+<p>A variable can reference different values over its lifetime when using <code>let</code> or <code>var</code>. For example, <code>myFirstVariable</code> can be defined and redefined many times using the assignment operator <code>=</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myFirstVariable</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">myFirstVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Some string&#39;</span>;
+<span style="color:#a6e22e">myFirstVariable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SomeComplexClass</span>();
+</code></pre></div><p>In contrast to <code>let</code> and <code>var</code>, variables that are defined with <code>const</code> can only be assigned once. This is used to define constants in JavaScript.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MY_FIRST_CONSTANT</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<span style="color:#75715e">// Can not be re-assigned.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">MY_FIRST_CONSTANT</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#75715e">// =&gt; TypeError: Assignment to constant variable.
+</span></code></pre></div><blockquote>
+<p>💡 In a later Concept Exercise the difference between <em>constant</em> assignment / binding and <em>constant</em> value is explored and explained.</p>
+</blockquote>
+<h3 id="function-declarations">Function Declarations</h3>
+<p>In JavaScript, units of functionality are encapsulated in <em>functions</em>, usually grouping functions together in the same file if they belong together. These functions can take parameters (arguments), and can <em>return</em> a value using the <code>return</code> keyword. Functions are invoked using <code>()</code> syntax.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">num2</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span>;
+}
+
+<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>);
+<span style="color:#75715e">// =&gt; 4
+</span></code></pre></div><blockquote>
+<p>💡 In JavaScript there are <em>many</em> different ways to declare a function. These other ways look different than using the <code>function</code> keyword. The track tries to gradually introduce them, but if you already know about them, feel free to use any of them. In most cases, using one or the other isn&rsquo;t better or worse.</p>
+</blockquote>
+<h3 id="exposing-to-other-files">Exposing to Other Files</h3>
+<p>To make a <code>function</code>, a constant, or a variable available in <em>other files</em>, they need to be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">exported</a> using the <code>export</code> keyword. Another file may then <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a> these using the <code>import</code> keyword. This is also known as the module system. A great example is how all the tests work. Each exercise has at least one file, for example <code>lasagna.js</code>, which contains the <em>implementation</em>. Additionally there is at least one other file, for example <code>lasagna.spec.js</code>, that contains the <em>tests</em>. This file <em>imports</em> the public (i.e. exported) entities in order to test the implementation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// file.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MY_VALUE</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">num2</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span>;
+}
+
+<span style="color:#75715e">// file.spec.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">MY_VALUE</span>, <span style="color:#a6e22e">add</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./file&#39;</span>;
+
+<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">MY_VALUE</span>, <span style="color:#ae81ff">5</span>);
+<span style="color:#75715e">// =&gt; 15
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#75715e">// @ts-check
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// ☝🏽 The line above enables type checking for this file. Various IDEs interpret
+</span><span style="color:#75715e">// the @ts-check directive. It will give you helpful autocompletion on the web
+</span><span style="color:#75715e">// and supported IDEs when implementing this exercise. You don&#39;t need to
+</span><span style="color:#75715e">// understand types, JSDoc, or TypeScript in order to complete this JavaScript
+</span><span style="color:#75715e">// exercise, and can completely ignore this comment block and directive.
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 👋🏽 Hi there!
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// On the JavaScript track we provide you with stubs. These stubs provide a
+</span><span style="color:#75715e">// starting point to solving the exercise.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// In general, each variable/constant and each declared function will have a
+</span><span style="color:#75715e">// JSDoc comment block above it, explaining what the variable/constant holds or
+</span><span style="color:#75715e">// the function is supposed to accomplish.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// 💡 Often, the JSDoc comment blocks have annotations, such as @param and
+</span><span style="color:#75715e">// @returns which are usually highlighted with a different color if the IDE
+</span><span style="color:#75715e">// you&#39;re in recognizes them. It&#39;s these annotations that are used when
+</span><span style="color:#75715e">// referring to the constant, variable, or function from somewhere else that
+</span><span style="color:#75715e">// IDEs display.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// You don&#39;t need to write these yourself; it is not expected in idiomatic
+</span><span style="color:#75715e">// JavaScript, but some companies and style-guides do enforce them.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// 💡 You&#39;re allowed to completely clear a stub before you get started. Often
+</span><span style="color:#75715e">// we recommend using the stub, because they are already set-up correctly to
+</span><span style="color:#75715e">// work with the tests, which you can find in ./lasagna.spec.js
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Good luck preparing some lasagna!
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The amount of minutes it takes to prepare a single layer.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PREPARATION_MINUTES_PER_LAYER</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Determines the amount of minutes the lasagna still needs to remain in the
+</span><span style="color:#75715e"> * oven to be properly prepared.
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @param {number} actualMinutesInOven
+</span><span style="color:#75715e"> * @returns {number} the number of minutes remaining
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">EXPECTED_MINUTES_IN_OVEN</span> <span style="color:#f92672">=</span><span style="color:#ae81ff">40</span>;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">remainingMinutesInOven</span>(<span style="color:#a6e22e">actualMinutesInOven</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">EXPECTED_MINUTES_IN_OVEN</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">actualMinutesInOven</span>;
+}
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Given a number of layers, determines the total preparation time.
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @param {number} numberOfLayers
+</span><span style="color:#75715e"> * @returns {number} the total preparation time
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preparationTimeInMinutes</span>(<span style="color:#a6e22e">numberOfLayers</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numberOfLayers</span> <span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+}
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Calculates the total working time. That is, the time to prepare all the layers
+</span><span style="color:#75715e"> * of lasagna, and the time already spent in the oven.
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @param {number} numberOfLayers
+</span><span style="color:#75715e"> * @param {number} actualMinutesInOven
+</span><span style="color:#75715e"> * @returns {number} the total working time
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">totalTimeInMinutes</span>(<span style="color:#a6e22e">numberOfLayers</span>, <span style="color:#a6e22e">actualMinutesInOven</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numberOfLayers</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#a6e22e">actualMinutesInOven</span>;
+}
+
+</code></pre></div>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/11-16%E9%9A%8F%E7%AC%94/">11 16随笔</a></li>
+				
+				<li><a href="/posts/sqltips/">SQLtips</a></li>
+				
+				<li><a href="/posts/javascript_and_java_cookyourlasagna/">JavaScript_and_Java_Cookyourlasagna</a></li>
+				
+				<li><a href="/posts/javascript_and_java_helloworld/">JavaScript_and_Java_HelloWorld</a></li>
+				
+				<li><a href="/posts/0910%E9%9A%8F%E7%AC%94/">0910随笔</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="http://bafeimao.github.io"><b>BafeimaoBlog</b></a>.
+	<a href="https://github.com/example"><b>Github</b></a>.
+	<a href="https://example.com/@user"><b>Mastodon</b></a>.
+	<a href="/imprint"><b>Imprint</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

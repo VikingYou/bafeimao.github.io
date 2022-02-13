@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>从零开始搭建GitHub&#43;HuGo&#43;PicGo图床教程</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	==================<br>
+	== <a href="http://bafeimao.github.io">BafeimaoBlog</a> ==<br>
+	==================
+	<div style="float: right;">Welcome!</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>从零开始搭建GitHub&#43;HuGo&#43;PicGo图床教程</h1>
+			<b><time>04.05.2021 11:46</time></b>
+		       
+		           <a href="/tags/%E5%9B%BE%E5%BA%8A">图床</a>
+        	       
+		           <a href="/tags/%E6%95%99%E7%A8%8B">教程</a>
+        	       
+		           <a href="/tags/github">Github</a>
+        	       
+		           <a href="/tags/%E6%96%B0%E6%89%8B">新手</a>
+        	       
+		           <a href="/tags/%E5%9B%BE%E6%96%87">图文</a>
+        	       
+
+			<div>
+				<p>[toc]</p>
+<h2 id="安装picgo">安装PicGo</h2>
+<p><a href="https://github.com/Molunerfinn/PicGo/releases">打开网址</a>
+向下寻找到稳定版本2.2.2，目前是2.2.2，以后更新自行选择更高稳定版本安装</p>
+<p>下载.exe结尾的文件，这里是PicGo-Setup-2.2.2.exe</p>
+<p>安装后可能会提示更新，但因为是beta版所以我们选择不更新</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504123556646.png" alt="image-20210504123556646" />
+</figure>
+
+
+</p>
+<p>下载完成后打开exe文件安装，选择全部用户和单独安装都可以，下一步直到安装结束</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504123943633.png" alt="image-20210504123943633" />
+</figure>
+
+
+</p>
+<p>打开PicGo显示如下界面</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504124229367.png" alt="image-20210504124229367" />
+</figure>
+
+
+</p>
+<h2 id="创建github账号">创建Github账号</h2>
+<p><a href="https://github.com/join">打开网址</a>
+<a href="https://wiki.jikexueyuan.com/project/github-basics/sign-up.html">教程网址</a>
+如图所示操作</p>
+<p>起的名字就是网址地址例如我的是bafeimao则网址地址是bafeimao.github.io以此类推</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504174409038.png" alt="image-20210504174409038" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504174521604.png" alt="image-20210504174521604" />
+</figure>
+
+
+</p>
+<p>创建仓库</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504124837721.png" alt="image-20210504124837721" />
+</figure>
+
+
+</p>
+<p>然后在github个人设置页面，创建一个访问令牌</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504125005777.png" alt="image-20210504125005777" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504125037193.png" alt="image-20210504125037193" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504125102902.png" alt="image-20210504125102902" />
+</figure>
+
+
+</p>
+<p>需要输入密码则输入密码</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504125124397.png" alt="image-20210504125124397" />
+</figure>
+
+
+</p>
+<p>只勾选第一个repo拉到最下面</p>
+<p>点击Generate new token按照下图配置创建即可。</p>
+<p>保存生成的密钥</p>
+<h2 id="配置picgo">配置PicGo</h2>
+<ul>
+<li>
+<p>第一个是用户名/仓库名</p>
+</li>
+<li>
+<p>第二个是分支名，一般默认设置为main</p>
+</li>
+<li>
+<p>第三个是Token，就是刚刚拿到的密钥</p>
+</li>
+<li>
+<p>后面两个可写可不写，建议存储路径写一个，把图片放到一个地方。</p>
+</li>
+<li>
+<p>点击“确定”，并设置为“默认图床”</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504125307349.png" alt="image-20210504125307349" />
+</figure>
+
+
+</p>
+</li>
+</ul>
+<p>上传图片查看github仓库是否有记录</p>
+<h2 id="配置typorapicgo">配置Typora+PicGo</h2>
+<p><a href="https://typora.io/#windows">Typora</a></p>
+<p>下载安装Typora</p>
+<p>打开Typora
+左上角 文件-&gt;偏好设置-&gt;图像</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504122103433.png" alt="image-20210504122103433" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504122533052.png" alt="image-20210504122533052" />
+</figure>
+
+
+</p>
+<p>需要勾上插入时自动转义图片URL！</p>
+<p>建议都不要勾选，根据使用情况发现手动上传好用一点emmm，可能过段时间就好了。</p>
+<h2 id="使用">使用</h2>
+<ul>
+<li>设置完成后，就可以很方便地使用了。  </li>
+<li>拖拽，在文件夹内拖拽图片到Typora编辑界面。</li>
+<li>插入，快捷键Ctrl+Shift+I，调出插入图片的功能。</li>
+<li>复制，使用截图功能后，直接粘贴到Typora编辑界面内。</li>
+<li>拖拽和插入都是自动将图片上传至图床。但是复制需要手动点击上传</li>
+</ul>
+<h2 id="安装windowsterminal">安装WindowsTerminal</h2>
+<p>打开Microsoft Store,搜索terminal并安装</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504154326359.png" alt="image-20210504154326359" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504154355897.png" alt="image-20210504154355897" />
+</figure>
+
+
+</p>
+<p>启动后在任务栏右键选择固定到任务栏，以后会常用到，然后关闭窗口右键选择使用管理员模式打开</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504154649234.png" alt="image-20210504154649234" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504155600979.png" alt="image-20210504155600979" />
+</figure>
+
+
+</p>
+<pre tabindex="0"><code>Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
+</code></pre><p>复制粘贴后回车执行</p>
+<p>然后是下一条命令</p>
+<pre tabindex="0"><code>Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+</code></pre><p>键入后回车</p>
+<p>如果报红出错则键入这个命令再键入上一条命令</p>
+<pre tabindex="0"><code>Install-Module PowerShellGet -Force -SkipPublisherCheck
+</code></pre><p>之后是下面两条命令配置每次打开终端执行导入git</p>
+<pre tabindex="0"><code>Import-Module posh-git
+Add-PoshGitToProfile -AllHosts
+</code></pre><p>使用命令</p>
+<pre tabindex="0"><code>git --version
+</code></pre><p>显示出版本则安装成功如下图所示</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504160859897.png" alt="image-20210504160859897" />
+</figure>
+
+
+</p>
+<p>然后我们来设置一下我们的git信息</p>
+<p>设置你的昵称和电子邮箱</p>
+<pre tabindex="0"><code>git config --global user.name &quot;YOUR NAME&quot;
+git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
+</code></pre><p>在命令行里执行以下命令安装ssh</p>
+<pre tabindex="0"><code>Install-Module Posh-SSH
+</code></pre><p>输入Y继续然后就会安装成功，输入命令测试</p>
+<pre tabindex="0"><code>ssh
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504161744692.png" alt="image-20210504161744692" />
+</figure>
+
+
+</p>
+<h2 id="现在开始安装hugo">现在开始安装Hugo</h2>
+<p><a href="https://github.com/gohugoio/hugo/releases">打开hugo网址</a>
+选择zip压缩包下载</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504162217959.png" alt="image-20210504162217959" />
+</figure>
+
+
+</p>
+<p>下载解压到一个文件夹改名字，别放到桌面放到一个安全的地方重命名</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504162640792.png" alt="image-20210504162640792" />
+</figure>
+
+
+</p>
+<p>里面有三个文件</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504162704588.png" alt="image-20210504162704588" />
+</figure>
+
+
+</p>
+<p>我们要为他配置全局变量不然只能在这个文件夹下执行命令，使用快捷键Windows+s打开搜索界面键入高级系统设置然后打开如下图所示</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504162951445.png" alt="image-20210504162951445" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163021518.png" alt="image-20210504163021518" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163102624.png" alt="image-20210504163102624" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163139839.png" alt="image-20210504163139839" />
+</figure>
+
+
+</p>
+<p>需要键入的地址可以在这里复制获得</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163209000.png" alt="image-20210504163209000" />
+</figure>
+
+
+</p>
+<p>然后每一步都要确定一共是三个确定直到高级系统设置窗口也关闭，我们关闭命令行重新打开一个输入命令查看</p>
+<pre tabindex="0"><code>hugo version
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163524027.png" alt="image-20210504163524027" />
+</figure>
+
+
+</p>
+<p>hugo安装成功</p>
+<p>我们进入到自己想进入的盘符以及想好自己想创建的站点名字</p>
+<pre tabindex="0"><code>hugo new site Bloghugo
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163803608.png" alt="image-20210504163803608" />
+</figure>
+
+
+</p>
+<p>当然也可以在文件浏览器查看我们通过命令行建立的站点</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163837713.png" alt="image-20210504163837713" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504163854191.png" alt="image-20210504163854191" />
+</figure>
+
+
+</p>
+<p>接下来我们学习几个简单的命令行进入和退出文件夹的命令</p>
+<pre tabindex="0"><code>cd ..
+cd yourdocument
+ls
+clear
+</code></pre><p>ls是查看当前目录的文件比如我在我当前目录使用ls是如下显示</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504164158872.png" alt="image-20210504164158872" />
+</figure>
+
+
+</p>
+<p>显示的是我当前目录下的文件及文件夹</p>
+<p>然后我们可以cd进入一个文件夹或者cd ..进入上一级目录再ls查看当前目录，在这里我们cd到一个目录里，当然不用你把整个目录名都用键盘输入，我们有代码补全键Tab，键入cd s后然后按Tab键，他就会自动补全然后键入回车进入目录</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504164450319.png" alt="image-20210504164450319" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504164503904.png" alt="image-20210504164503904" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504164523809.png" alt="image-20210504164523809" />
+</figure>
+
+
+</p>
+<p>然后使用ls查看，当然我们也可以切换盘符，cd e:命令就可以进入E盘，然后ls查看当前目录</p>
+<p>我们cd到主题文件夹里也就是theme</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504164929705.png" alt="image-20210504164929705" />
+</figure>
+
+
+</p>
+<p>使用git的gitclone命令把主题下载下来</p>
+<pre tabindex="0"><code>git clone https://github.com/varkai/hugo-theme-zozo
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165036368.png" alt="image-20210504165036368" />
+</figure>
+
+
+</p>
+<p>ls可以查看已经下载下来了，然后我们进去看一下把模板拷出来复制到站点指定位置，以下步骤可能使用文件管理器更快速一些</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165215702.png" alt="image-20210504165215702" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165325935.png" alt="image-20210504165325935" />
+</figure>
+
+
+</p>
+<p>模板里的文件和站点里三个文件是对应的，我们复制粘贴覆盖掉然后在站点目录下，把hugo-theme-zozo文件夹重命名为zozo，运行一下命令在本地执行看看效果</p>
+<pre tabindex="0"><code>hugo server
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165533800.png" alt="image-20210504165533800" />
+</figure>
+
+
+</p>
+<p>注意当前位置</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165849936.png" alt="image-20210504165849936" />
+</figure>
+
+
+</p>
+<p>按住Ctrl访问链接查看</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504165925434.png" alt="image-20210504165925434" />
+</figure>
+
+
+</p>
+<p>本地预览成功接下来我们要推送到github上让他能从网络上访问</p>
+<p>由于github时不时被墙所以我们要设置一下代理，防止被墙心情不好还是设置一下比啊较好，很容易暴躁。</p>
+<pre tabindex="0"><code>git config --global http.proxy 'socks5://127.0.0.1:14808'
+
+git config --global https.proxy 'socks5://127.0.0.1:14808'
+
+git config --global --unset http.proxy
+
+git config --global --unset https.proxy
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504170407368.png" alt="image-20210504170407368" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504170437166.png" alt="image-20210504170437166" />
+</figure>
+
+
+</p>
+<p>上面两行命令是设置代理，下面两行命令是取消代理，如果代理不能用或者不需要代理了则可以通过下面两个命令取消,我们也可以通过命令查看我们是否设置代理</p>
+<pre tabindex="0"><code>git config -l
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504170820984.png" alt="image-20210504170820984" />
+</figure>
+
+
+</p>
+<p>我这里没有设置是因为通过其他方式翻墙了，啊对，之前的图床如果无法上传图片可能也要设置代理，比较简单就不赘述了都在软件设置里可以找到。</p>
+<h2 id="接下来我们正式开始部署到github的操作">接下来我们正式开始部署到github的操作</h2>
+<p>打开github登陆自己的账号</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504171421710.png" alt="image-20210504171421710" />
+</figure>
+
+
+</p>
+<p>这次我们新建的仓库名字要和我们的用户名一致不能不一样，格式就是yourname.github.io,然后下面的应该是public不是private，然后最下面的main也要注意一下有可能是master这会导致以后的命令有一些区别</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504171611571.png" alt="image-20210504171611571" />
+</figure>
+
+
+</p>
+<p>下面圈出的地方ssh地址后面要用到</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504171947907.png" alt="image-20210504171947907" />
+</figure>
+
+
+</p>
+<p>然后我们配置ssh让本地电脑可以向github进行推送</p>
+<p>打开命令行键入命令生成密钥，我这里用的是自己的邮箱</p>
+<pre tabindex="0"><code>ssh-keygen -t rsa -C &quot;myname@163.com&quot;
+</code></pre><p>然后一路回车即可</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504172639060.png" alt="image-20210504172639060" />
+</figure>
+
+
+</p>
+<p>上面的图我其他地方copy来的，大差不差</p>
+<p>然后使用下面的命令查看公钥</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_rsa.pub
+</code></pre><p>会获得ssh-rsa开头邮箱结尾的一长串数字复制下来到github上配置</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504172225588.png" alt="image-20210504172225588" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504173019470.png" alt="image-20210504173019470" />
+</figure>
+
+
+</p>
+<p>不用输入Title直接粘贴到key里面然后点Add SSH key就可以然后就变成如上图所示</p>
+<p>然后我们现在建立了仓库，配置了SSH，接下来就是去生成我们的文件然后部署到github上面，我们需要对目录下的config.toml文件根据自己的需要更改一些配置，评论系统稍后更新，以后可以根据自己的需要随时更改，更改后打开命令行</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504173538702.png" alt="image-20210504173538702" />
+</figure>
+
+
+</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504173736887.png" alt="image-20210504173736887" />
+</figure>
+
+
+</p>
+<p>键入hugo会构建内容生成一个public文件夹可以进去查看我们使用ls然后cd进去</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504173854310.png" alt="image-20210504173854310" />
+</figure>
+
+
+</p>
+<p>键入以下命令</p>
+<pre tabindex="0"><code>git init
+git .
+git commit -m'test'
+</code></pre><p>然后键入下面一行命令,是一行。</p>
+<pre tabindex="0"><code>git remote add blog git@github.com:bafeimao/bafeimao.github.io.git
+</code></pre><pre tabindex="0"><code>git pull  blog main --allow-unrelated-histories
+</code></pre><p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504175835597.png" alt="image-20210504175835597" />
+</figure>
+
+
+</p>
+<p>键入yes</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504180144244.png" alt="image-20210504180144244" />
+</figure>
+
+
+</p>
+<p>上传成功，可以在仓库里看到新增的文件</p>
+<p>
+<figure>
+  <img src="https://raw.githubusercontent.com/bafeimao/Picture/main/img/image-20210504180232117.png" alt="image-20210504180232117" />
+</figure>
+
+
+</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/11-16%E9%9A%8F%E7%AC%94/">11 16随笔</a></li>
+				
+				<li><a href="/posts/sqltips/">SQLtips</a></li>
+				
+				<li><a href="/posts/javascript_and_java_cookyourlasagna/">JavaScript_and_Java_Cookyourlasagna</a></li>
+				
+				<li><a href="/posts/javascript_and_java_helloworld/">JavaScript_and_Java_HelloWorld</a></li>
+				
+				<li><a href="/posts/0910%E9%9A%8F%E7%AC%94/">0910随笔</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="http://bafeimao.github.io"><b>BafeimaoBlog</b></a>.
+	<a href="https://github.com/example"><b>Github</b></a>.
+	<a href="https://example.com/@user"><b>Mastodon</b></a>.
+	<a href="/imprint"><b>Imprint</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>ChallengeARTX1</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	==================<br>
+	== <a href="http://bafeimao.github.io">BafeimaoBlog</a> ==<br>
+	==================
+	<div style="float: right;">Welcome!</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>ChallengeARTX1</h1>
+			<b><time>22.05.2021 08:37</time></b>
+		       
+		           <a href="/tags/html">HTML</a>
+        	       
+		           <a href="/tags/js">JS</a>
+        	       
+		           <a href="/tags/artx">ARTX</a>
+        	       
+
+			<div>
+				<h2 id="mdn练习随机生成笑话机以下是实现">MDN练习随机生成笑话机以下是实现</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge,chrome=1&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width&#34;</span>&gt;
+
+    &lt;<span style="color:#f92672">title</span>&gt;笑话机&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main.js&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;customname&#34;</span>&gt;输入自定义名字：&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;customname&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;李雷&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;metric&#34;</span>&gt;公制&lt;/<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;metric&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;measure&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;metric&#34;</span> <span style="color:#a6e22e">checked</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;american&#34;</span>&gt;美制&lt;/<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;american&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;measure&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;american&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;randomize&#34;</span>&gt;生成随机笑话&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    <span style="color:#75715e">&lt;!-- 鸣谢：Willy Aguirre 提供的测试代码 --&gt;</span>
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;story&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">customName</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;customname&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">randomize</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.randomize&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">story</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.story&#39;</span>);
+
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">randomValueFromArray</span>(<span style="color:#a6e22e">array</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">array</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>)];
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">storyText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;今天气温 35 摄氏度，:insertx:出门散步。当走到:inserty:门前时，突然就:insertz:。人们都惊呆了，李雷全程目睹但并没有慌，因为:insertx:是一个 140 公斤的胖子，天气又辣么热。&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">insertX</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;怪兽威利&#39;</span>, <span style="color:#e6db74">&#39;大老爹&#39;</span>, <span style="color:#e6db74">&#39;圣诞老人&#39;</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">insertY</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;肯德基&#39;</span>, <span style="color:#e6db74">&#39;迪士尼乐园&#39;</span>, <span style="color:#e6db74">&#39;白宫&#39;</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">insertZ</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;自燃了&#39;</span>, <span style="color:#e6db74">&#39;在人行道化成了一坨泥&#39;</span>, <span style="color:#e6db74">&#39;变成一只鼻涕虫爬走了&#39;</span>];
+
+<span style="color:#a6e22e">randomize</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#a6e22e">result</span>);
+
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">result</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">storyText</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xItem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomValueFromArray</span>(<span style="color:#a6e22e">insertX</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">yItem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomValueFromArray</span>(<span style="color:#a6e22e">insertY</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">zItem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomValueFromArray</span>(<span style="color:#a6e22e">insertZ</span>);
+
+    <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;:insertx:&#34;</span>, <span style="color:#a6e22e">xItem</span>);
+    <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;:insertx:&#34;</span>, <span style="color:#a6e22e">xItem</span>);
+    <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;:inserty:&#34;</span>, <span style="color:#a6e22e">yItem</span>);
+    <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;:insertz:&#34;</span>, <span style="color:#a6e22e">zItem</span>);
+
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">customName</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span>) {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">customName</span>.<span style="color:#a6e22e">value</span>;
+        <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;李雷&#39;</span>, <span style="color:#a6e22e">name</span>);
+
+    }
+
+    <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;american&#34;</span>).<span style="color:#a6e22e">checked</span>) {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">300</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;华氏度&#34;</span>;
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temperature</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">94</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;磅&#34;</span>;
+        <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;34摄氏度&#34;</span>, <span style="color:#a6e22e">temperature</span>);
+        <span style="color:#a6e22e">newStory</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;130公斤&#34;</span>, <span style="color:#a6e22e">weight</span>);
+
+    }
+
+    <span style="color:#a6e22e">story</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newStory</span>;
+    <span style="color:#a6e22e">story</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">visibility</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;visible&#39;</span>;
+}
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#66d9ef">sans-serif</span>;
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">350</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">label</span> {
+  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;  
+}
+
+<span style="color:#f92672">div</span> {
+  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">]</span> {
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">150</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">p</span> {
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#FFC125</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#5E2612</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">visibility</span>: <span style="color:#66d9ef">hidden</span>;
+}
+
+</code></pre></div><p>自己尝试做时没有想到用replace这么便利的方法，想尝试用字符串切分但非常复杂且不易理解和维护，非常蠢笨，写完逻辑后发现怎么都跑不动才发现script引入标签时要加defer属性让js在html运行后再加载。</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/11-16%E9%9A%8F%E7%AC%94/">11 16随笔</a></li>
+				
+				<li><a href="/posts/sqltips/">SQLtips</a></li>
+				
+				<li><a href="/posts/javascript_and_java_cookyourlasagna/">JavaScript_and_Java_Cookyourlasagna</a></li>
+				
+				<li><a href="/posts/javascript_and_java_helloworld/">JavaScript_and_Java_HelloWorld</a></li>
+				
+				<li><a href="/posts/0910%E9%9A%8F%E7%AC%94/">0910随笔</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="http://bafeimao.github.io"><b>BafeimaoBlog</b></a>.
+	<a href="https://github.com/example"><b>Github</b></a>.
+	<a href="https://example.com/@user"><b>Mastodon</b></a>.
+	<a href="/imprint"><b>Imprint</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>
